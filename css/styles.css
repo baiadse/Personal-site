@@ -1,0 +1,214 @@
+body {
+  color: #40514E;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  /*use Merriweather but if something wrong happened use the default font by serif family */
+}
+
+h1 {
+  font-size: 562.5%;
+  /* is equivalent to 90px because every 100% is 16px in font size */
+  /*and we use the % so if the user uses browser with small font (in settings) or the website is used
+  in other devices then it will be fit */
+  /*we can another type which is em : 16px = 100% = 1em (the size of M letter) note : em and % are dynamically sized ( can scale up and down ) */
+  /*another thing here is when we use em (or %) in the parent, that value is inherited so if in the body we set font-size: 2em and then in h1 we set font-size to 5.625em then the 2em is
+  already applied and we also apply now the new font-size , so it will be added to it (i.e 2 + 5.625). */
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  color: #66BFBF;
+  /*line-height: 2; this will increase the space between whatever is on the top of the text of h1 and and whatever below i. */
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p{
+  line-height: 2;
+}
+
+hr{
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+a{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+
+.skills{
+  margin-bottom: 150px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 150px auto;
+  text-align: left;
+}
+
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  /*this is relative so the bottom-cloud and top-cloud are now relative to this div (container) */
+  padding-top: 100px;
+}
+
+.middle-container {
+  margin: 100px 0;
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+}
+
+.top-cloud {
+  position: absolute;
+  top: 40px;
+  right: 300px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+
+.profile-img {
+  height: 300px;
+  width: 300px;
+}
+
+.code-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+
+}
+
+.chilli-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+.contact-message{
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright{
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro{
+  width: 30%;
+  margin: auto;
+}
+
+.btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+/*The display property in CSS is : The display CSS property sets whether an element is treated as a block or inline element, block means that the box of the element is blocking the whole width
+so no other element can be set next to the block element in the same line,
+The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
+inline : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
+note, the inline element wdith can't be changed, but a block element we can change it's width but it will still use break line , so no other element can be set next to it,
+if we want to make inline element but also to be able to change it's width we can use the third type of DISPLAY which inline-block, so it will act like inline but we can change the width.
+another type of DISPLAY is none, which will make the element disappear (like it has never existed). */
+/*another property in CSS is visibility, we can set visibility to hidden and it's kind of display: none , but the difference between them is that visibility: hidden will keep the space for the
+hidden item occupied, (so you will see a blank space for this item, this is used for example to hide the answer of a quiz in our website) */
+/*In Html there is poisitioning and ordering manner for elements, if we type h1 then p , then h1 will be laid out before p, and if we type <p><h1>Hello<h1/><p/> then h1 will be the child of p
+and that's mean that h1 will look at p as it's screen, etc.. . we can use some CSS code in order to beautify our design, for example we already used display, so we can put our elements to be
+inline or block etc.. another thing is margin and padding etc.. and now a new property we can use in CSS is position, position is set to static by default which is the pure html design,
+all elements are set one under the other element or next to each other sticked to the left side of the page. but if we change the position property to relative, then we can change the position
+of an element relatively to its static original position. (this is so important to note). after changing the position property to relative we can now change the properties left, top, bottom, right
+so for example if we change a div element of height 200px and width 200px by left: 100px then the box of div will be pushed to RIGHT by 100px from the statring left corner.
+in order to understand this, we can think about poisitioning as margin, when we type margin-left: 100px then our box will be moved to right by 100px.
+The difference between margin and position is that margin will change the other boxes ( elements ) next to our element, if we use margin-left then if there was another box in the right side of our box
+then it will be moved to right also, but with position left, the other box will not change it's position, and our main box will occupy some of the other box space. i.e margin will be added to
+our element but position is not a 'thing' that is can be seen in inspect, it is just a position.
+
+/* we can also change the position to absolute, and thats mean that the box we are intersted to move it's position now is relative to its parent position, if we have a div element inside the body element
+and we set the div to be right: 30px then from the RIGHT side of the whole body it will be moved to the left (and this is a difference between absolute and relative poisitioning) by 30px.
+another thing to notice, if we change the position to absolute then this box will not be considered with other position types, so if we have two other divs with position:relative then
+the first box will start at the top left, even we have a box already set there with position:absolute, they will occupy the same space. */
+/*another type of position is fixed, this means that the box will stay on the screen on the same position even when we scroll down and up the page. */
+/*in order to center something we can use text-align, for example for the body we can use the property text-align: center; and everything will be centered
+ but if the element has width changed, like h1, then text-align does not work, so we have to use another way which is margin, we can set margin to something called auto, see above. */
+/*notice that the if we change the width of something, for example h1, to width:10px but we have content (text) that will take more place than 10px then it will still have more than 10px
+
+ /*in order to make the element which its position set to absolute to be relative to a parent, (not a body) then the parent must apply position:relative */
+/* our website is organized in html manner, sticked to the left, but if we want to make another lay our, we can use CSS properties such as text-align:center etc, but what if we want to use
+ specific positions for specific elements (for example the clouds in this website), here we will have to use position and margin, padding etc, so in order to take the clouds in our website
+ to specific position we made our clouds to get out from the HTML FLOW (which is the main ordering in html i.e static poisitioning) and when we change their position property to absolute
+ and because the container (first div the body) is relative, then the absolute poisitioning will be relative to the container, (this is their screen) we now can play with the left,top ... */
+/*there are two major font families, and thats Serif and Sans-serif fonts ( and they apart from each other by the feets on the letters). by default our websites uses Serif family font, for each
+ family, they have a lot of fonts, for example the default font for Sans-serif is Arial font,
+ now notice that if we use a specific font, sometimes a user OS or broweser don't have your font, so they will see your website in a completely differente font, so it is recommended
+ to use SAFE FONTS ( you can find them in the internet W3schools - CSS Web safe font), but becasue there is no 100% safe font we can specify some fonts type, so the
+ browser will try the first one then the second on fail then the third font ..etc. (we can use cssfontstack.com to copy the series of good fonts from specific to general)
+ BUT : THE best way is to link the fonts we want to use in our websites, by using fonts.google.com -> choose the fonts you like and add them to the selection -> then take the link
+ and add the link to the head in index.html .
+ */
+/*
+ font-size: 562.5%; /* is equivalent to 90px because every 100% is 16px in font size */
+/*and we use the % so if the user uses browser with small font (in settings) or the website is used
+ in other devices then it will be fit */
+/*we can another type which is em : 16px = 100% = 1em (the size of M letter) note : em and % are dynamically sized ( can scale up and down ) */
+/*another thing here is when we use em (or %) in the parent, that value is inherited so if in the body we set font-size: 2em and then in h1 we set font-size to 5.625em then the 2em is
+ already applied and we also apply now the new font-size , so it will be added to it (i.e 2 + 5.625).
+ */
+/*we can use rem instead of em, and that means forget about the parent settings for the font-size and apply only this, for example : font-size: 5.625rem  */
+
+/*we can use float property in order to put text next to an image, and if we want to put some text under the image we can use clear for the specific text */
